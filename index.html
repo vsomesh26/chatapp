@@ -11,6 +11,21 @@
       #messages { list-style-type: none; margin: 0; padding: 0; }
       #messages li { padding: 5px 10px; }
       #messages li:nth-child(odd) { background: #eee; }
+      /* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) { 
+  #messages li { font-size: 60px;
+   }
+   form input { line-height: 1in;width: 80% ;padding: 20px; }
+   form button {line-height: 1in;width: 19%; font-size: 60px;padding: 10px;}
+  }
+
+
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {#messages li { font-size: 20px;
+   }
+   form input { line-height: 4em;width: 90% ;padding: 10px; }
+   form button {line-height: 3em;width: 9%; font-size: 20px;padding: 10px;}}
     </style>
     <script src="https://cdn.socket.io/socket.io-3.0.1.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
