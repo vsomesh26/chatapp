@@ -16,7 +16,11 @@ io.on('connection', (socket) => {
   socket.on('chat message', (msg) => {
     io.emit('chat message', msg);
   });
-  io.emit('chat message', ' Welcome to serverless deployment world');
+  io.emit('chat message', 'Welcome to aws EC2 deployment world, one new person joined');
+  
+  socket.on('disconnect', () => {
+    io.emit('chat message', 'one person disconnected');
+  });
  
 });
  
